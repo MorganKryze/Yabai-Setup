@@ -8,7 +8,7 @@ yabai-help() {
     ORANGE='\033[0;33m'
     RESET='\033[0m'
 
-    echo -e "\nWelcome to the Yabai Helper!\n"
+    echo -e "\nWelcome to the Yabai Config helper!\n"
 
     echo -e "Here are all the Yabai functions created to help you manage your window manager.\n"
 
