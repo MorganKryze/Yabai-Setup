@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Install yabai and skhd using Homebrew
+# Requires Homebrew to be installed
 yabai-install() {
     if ! command -v brew &> /dev/null; then
         echo "yabai-install: HomeBrew is not installed. Please install HomeBrew first."
@@ -21,6 +23,7 @@ yabai-install() {
     echo "yabai-install: 🎉 yabai and skhd installation completed successfully! You may now restart your computer. 🎉"
 }
 
+# Uninstall yabai and skhd along with their configurations
 yabai-uninstall() {
     read -r rmconfig"?yabai-uninstall: Do you want to remove yabai and skhd configuration files? [Y/n] " # for zsh
     if [[ $rmconfig =~ ^[Yy]$ ]]; then
@@ -51,6 +54,7 @@ yabai-uninstall() {
     echo "yabai-uninstall: 🎉 yabai and skhd uninstallation completed successfully! You may now restart your computer. 🎉"
 }
 
+# Start yabai and skhd services
 yabai-start() {
     echo "yabai-start: 🛠️ Starting yabai and skhd services 🛠️"
     yabai --start-service
@@ -59,6 +63,7 @@ yabai-start() {
     echo "yabai-start: 🎉 yabai and skhd services started successfully! 🎉"
 }
 
+# Stop yabai and skhd services
 yabai-stop() {
     echo "yabai-stop: 🛠️ Stopping yabai and skhd services 🛠️"
     yabai --stop-service
@@ -67,6 +72,7 @@ yabai-stop() {
     echo "yabai-stop: 🎉 yabai and skhd services stopped successfully! 🎉"
 }
 
+# Restart yabai and skhd services
 yabai-restart() {
     echo "yabai-restart: 🛠️ Restarting yabai and skhd services 🛠️"
     yabai --stop-service
