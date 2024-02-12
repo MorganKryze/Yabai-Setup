@@ -1,6 +1,6 @@
 # Yabai-Config
 
-> A simple and clean configuration functions set for yabai.
+> A simple set of functions to set up and use yabai.
 
 ![screenshot](./src/assets/img/screenshot.png)
 
