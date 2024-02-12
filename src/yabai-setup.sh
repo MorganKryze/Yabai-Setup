@@ -1,5 +1,49 @@
 #!/bin/sh
 
+# Display help information for Yabai functions, including descriptions and usage instructions
+yabai-help() {
+    GREEN='\033[0;32m'
+    BLUE='\033[0;34m'
+    RED='\033[0;31m'
+    ORANGE='\033[0;33m'
+    RESET='\033[0m'
+
+    echo -e "\nWelcome to the Yabai Helper!\n"
+
+    echo -e "Here are all the Yabai functions created to help you manage your window manager.\n"
+
+    echo -e "Available functions:\n"
+    for func in yabai-install yabai-uninstall yabai-start yabai-stop yabai-restart; do
+        echo -e "  ${BLUE}$func:${RESET}"
+        case "$func" in
+        "yabai-install")
+            echo -e "    Install yabai and skhd and configure them.\n"
+            echo -e "    Usage: ${GREEN}yabai-install${RESET}"
+            ;;
+        "yabai-uninstall")
+            echo -e "    Uninstall yabai and skhd along with their configurations.\n"
+            echo -e "    Usage: ${GREEN}yabai-uninstall${RESET}"
+            ;;
+        "yabai-start")
+            echo -e "    Start yabai and skhd services.\n"
+            echo -e "    Usage: ${GREEN}yabai-start${RESET}"
+            ;;
+        "yabai-stop")
+            echo -e "    Stop yabai and skhd services.\n"
+            echo -e "    Usage: ${GREEN}yabai-stop${RESET}"
+            ;;
+        "yabai-restart")
+            echo -e "    Restart yabai and skhd services.\n"
+            echo -e "    Usage: ${GREEN}yabai-restart${RESET}"
+            ;;
+        *)
+            echo -e "  ${RED}No help text available.${RESET}"
+            ;;
+        esac
+        echo ""
+    done
+}
+
 # Install yabai and skhd using Homebrew
 # Requires Homebrew to be installed
 yabai-install() {
