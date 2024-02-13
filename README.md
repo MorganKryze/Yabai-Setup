@@ -57,18 +57,6 @@ Now, everything is set up. Start by running the following command:
 yabai-help
 ```
 
-If you encounter this error message:
-
-```plaintext
-zsh: command not found: yabai-help
-```
-
-Then redo the following command and restart your terminal (or add manually the path to your .zshrc):
-
-```sh
-zsh add-commands.sh
-```
-
 Now you may start the installation process by running the following command:
 
 ```sh
@@ -93,6 +81,22 @@ Now that you have installed the project, you can use the following commands:
 - `yabai-stop`: Stop yabai service.
 - `yabai-restart`: Restart yabai.
 - `yabai-uninstall`: Uninstall yabai (refer to [this page](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection) to re-enable system integrity protection)
+
+### Troubleshooting
+
+If you encounter this error message (or for any command):
+
+```plaintext
+zsh: command not found: yabai-help
+```
+
+You may not have add the path to the `yabai-setup.sh` file to your shell configuration file (e.g. `~/.zshrc`) or moved the project directory.
+
+Then redo the following command and restart your terminal (or add manually the path to your .zshrc located in `~/.zshrc`):
+
+```sh
+zsh add-commands.sh
+```
 
 ### Project structure
 
