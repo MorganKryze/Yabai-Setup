@@ -13,7 +13,7 @@ yabai-help() {
     echo -e "Here are all the Yabai functions created to help you manage your window manager.\n"
 
     echo -e "Available functions:\n"
-    for func in yabai-install yabai-uninstall yabai-start yabai-stop yabai-restart; do
+    for func in yabai-install yabai-uninstall yabai-update yabai-start yabai-stop yabai-restart; do
         echo -e "  ${BLUE}$func:${RESET}"
         case "$func" in
         "yabai-install")
@@ -23,6 +23,10 @@ yabai-help() {
         "yabai-uninstall")
             echo -e "    Uninstall yabai and skhd along with their configurations.\n"
             echo -e "    Usage: ${GREEN}yabai-uninstall${RESET}"
+            ;;
+        "yabai-update")
+            echo -e "    Update yabai and skhd to the latest version.\n"
+            echo -e "    Usage: ${GREEN}yabai-update${RESET}"
             ;;
         "yabai-start")
             echo -e "    Start yabai and skhd services.\n"
@@ -96,6 +100,20 @@ yabai-uninstall() {
     killall Dock
 
     echo "yabai-uninstall: 🎉 yabai and skhd uninstallation completed successfully! You may now restart your computer. 🎉"
+}
+
+# Update yabai and skhd to the latest version
+yabai-update(){
+    echo "yabai-update: 🛠️ Getting last version of the project 🛠️"
+    git pull
+
+    echo "yabai-update: 🛠️ Updating brew data 🛠️"
+    brew update
+
+    echo "yabai-update: 🛠️ Upgrading yabai and skhd 🛠️"
+    brew upgrade yabai skhd
+
+    echo "yabai-update: 🎉 yabai and skhd updated successfully! 🎉"
 }
 
 # Start yabai and skhd services

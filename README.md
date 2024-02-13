@@ -81,6 +81,10 @@ Now that you have installed the project, you can use the following commands:
 - `yabai-stop`: Stop yabai service.
 - `yabai-restart`: Restart yabai.
 - `yabai-uninstall`: Uninstall yabai (refer to [this page](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection) to re-enable system integrity protection)
+- `yabai-update`: Update the project alogside with yabai and skhd.
+  
+> [!TIP]
+> I recommend you to use the `yabai-update` often to stay up to date with the project.
 
 ### Troubleshooting
 
