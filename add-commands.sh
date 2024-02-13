@@ -2,7 +2,7 @@
 
 echo "yabai-setup: 🛠️ Getting the full path of yabai-setup.sh 🛠️"
 full_path=$(realpath src/yabai-setup.sh)
-line_to_add="\n# Yabai functions for tiling management\nsource $full_path\n"
+line_to_add="\n# Yabai commands for tiling management\nsource $full_path"
 
 echo "yabai-setup: 🛠️ Trying to add the reference to the file in the .zshrc 🛠️"
 if [ -f ~/.zshrc ]; then
