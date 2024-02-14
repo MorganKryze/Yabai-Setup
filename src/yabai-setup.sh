@@ -105,7 +105,10 @@ yabai-uninstall() {
 # Update yabai and skhd to the latest version
 yabai-update(){
     echo "yabai-update: 🛠️ Getting last version of the project 🛠️"
-    git pull
+    local repo_path="$EASY_ENV_PATH"
+    cd "$repo_path"
+    git pull origin main
+    cd -
 
     echo "yabai-update: 🛠️ Updating brew data 🛠️"
     brew update
